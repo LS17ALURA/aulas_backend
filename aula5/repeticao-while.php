@@ -22,7 +22,7 @@
         }
     </pre>
 </p>
-<div class="container">
+<div class="container";>
 <?php
         $a2=1;
          //for ($contador=1; $contador <= 10; $contador++) {
