@@ -15,7 +15,7 @@
     //imprimir só a primeira nota
     echo (($notas[0]+$notas[1])/count($notas)); //count() funciona igual a sizeof(), mas é mais rápido e otimizado
     //vetores com índice textual
-    $notas =[]; //cria um betor vazio
+    $notas =[]; //cria um vetor vazio
     $notas['debora']=7;
     $notas['murilo']=7.8;
     $notas['poliana']=9;
