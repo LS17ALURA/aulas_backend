@@ -1,6 +1,6 @@
-<h2>Exercício 3</h2>
+<h2>Exercício 4</h2>
 <p>
-    Criar a matriz abaixo, após imprimir seus valores utilizando a estrutura de repetição foreach e for.
+    Criar a matriz abaixo, após imprimir seus valores utilizando a estrutura de repetição foreach.
 </p>
 <pre>
          +--------+--+--+
@@ -17,11 +17,8 @@
     $aluno3=["nome"=>"André","nota1"=>6,"nota2"=>7];
 
     $matriz=[$aluno1,$aluno2,$aluno3];
-
-    for ($i=0; $i <=2 ; $i++) { //for - index numérico
-        foreach ($matriz[$i] as $key => $value) { //foreach - index qualquer
-            echo nl2br($value." | ");
+    $i=0;
+    foreach ($matriz as $key => $value) { //foreach - index qualquer
+            echo nl2br($value["nome"]." | ".$value["nota1"]." | ".$value["nota2"]." | ".PHP_EOL);
         }
-        echo nl2br(PHP_EOL);
-    }
 ?>
