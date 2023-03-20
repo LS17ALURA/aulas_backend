@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alunos</title>
 </head>
-<body bgcolor="black">
+<body>
     <h1>Lista de Alunos</h1>
     <hr>
     <table border="1" width="100%">
@@ -19,27 +19,27 @@
     <script>
         const tabela = document.querySelector("table");
         function criarLinha(nome,nota1,nota2){
-        let linha=tabela.insertRow();
-        let celNome=linha.insertCell();
-        let celNota1=linha.insertCell();
-        let celNota2=linha.insertCell();
-        let celMedia=linha.insertCell();
-     
-        celNome.innerText = nome;
-        celNota1.innerText = nota1;
-        celNota2.innerText = nota2;
-        celMedia.innerText = (nota1+nota2)/2;
+            let linha=tabela.insertRow();
+            let celNome=linha.insertCell();
+            let celNota1=linha.insertCell();
+            let celNota2=linha.insertCell();
+            let celMedia=linha.insertCell();
+
+            celNome.innerText = nome;
+            celNota1.innerText = nota1;
+            celNota2.innerText = nota2;
+            celMedia.innerText = (nota1+nota2)/2;
+    }
+
+    //fazer uma requisição para o backend
+    fetch("http://localhost/3infoa/lavinia/aula11/alunos.php")
+    .then(response=>response.json())
+    .then(json=>{
+        for(let aluno of json){
+            criarLinha(aluno.nome,aluno.nota1,aluno.nota2);
         }
+    });
 
-        //fazer um requisição pro backend
-        fetch("http://localhost/3infoa/lavinia/aula11/alunos.php")
-        .then(response=>response.json())
-        .then(json=>{
-            for(let aluno of json){
-                criarLinha(aluno.nome,aluno.nota1,aluno.nota2);
-            }
-        });
-
-    </script>
+</script>
 </body>
 </html>

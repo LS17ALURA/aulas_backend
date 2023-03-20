@@ -9,6 +9,6 @@
     // print_r($dados);  
     echo json_encode($dados);
     // [] lista ou array numérico
-    // {} => objeto ou array textual
+    // {} =>
     
 ?>
