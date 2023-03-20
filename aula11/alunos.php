@@ -1,6 +1,3 @@
-
-
-
 <?php
     $aluno1=["nome"=>"Poliana Oliveira","nota1"=>7,"nota2"=>9];
     $aluno2=["nome"=>"Múrilo Alexandre","nota1"=>8,"nota2"=>5];
