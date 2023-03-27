@@ -4,4 +4,5 @@
         $c=$_POST["cor"];
         echo "<style>body{background-color:$c}</style>"; 
     }
-           ?>
+           
+?>
