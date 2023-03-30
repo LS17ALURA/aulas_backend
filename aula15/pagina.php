@@ -20,7 +20,6 @@
 </head>
 <body>
 <?php
-   
     foreach ($cores as $key => $cor) {
         echo "<a href='pagina.php?cor=$cor'>Mudar para $cor.</a><br>";
     }
