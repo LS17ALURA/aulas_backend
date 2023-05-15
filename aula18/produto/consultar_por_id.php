@@ -24,7 +24,7 @@ if(isset($_GET['id'])){
     $resultado=$comando->get_result();
 
     // pegar a primeira linha do resultado
-    $linha=$resultado->fetch_assoc();
+    $produto=$resultado->fetch_assoc();
 
     // var_dump($linha);
 }

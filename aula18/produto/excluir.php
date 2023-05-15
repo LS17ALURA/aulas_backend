@@ -21,5 +21,5 @@ if(isset($_GET['id'])){
     $comando->execute();
 }
 
-//abre o arquivo form.php
-header("Location: form.php");
+//abre o arquivo produtos.php
+header("Location: produtos.php");

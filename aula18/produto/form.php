@@ -1,3 +1,7 @@
+<?php
+    require_once "consultar_por_id.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,16 +13,18 @@
 <body>
     <h1>Cadastro de produtos</h1>
     <hr>
-
-    <form action="inserir.php" method="post">
+<!-- (condição) ?? == if...else -->
+<!-- echo (condição) ? true : false -->
+<form action="<?php echo isset($produto) ? "atualizar.php" : "inserir.php" ?>" method="post">
         <label for="nome">Nome</label><br>
-        <input type="text" id="nome" name="nome" ><br>
+        <input type="text" id="nome" name="nome" value="<?php echo $produto["nome"] ?? ""; ?>"><br>
+        <input type="hidden" id="id" name="id" value="<?php echo $produto["idproduto"] ?? ""; ?>"><br>
 
-        <label for="descricao">Descrição</label><br>
-        <input type="textarea" id="descricao" name="descricao" ><br>
-
+       <label for="descricao">Descrição</label><br>
+       <textarea id="descricao" name="descricao"><?php echo $produto["descricao"] ?? ""; ?></textarea><br>
+       
         <label for="preco">Preço</label><br>
-        <input type="number" step="0.01" id="preco" name="preco" ><br>
+        <input type="number" step="0.01" id="preco" name="preco" value="<?php echo $produto["preco"] ?? ""; ?>"><br>
 
         <label for="foto">Foto</label><br>
         <input type="file" id="foto" name="foto" value=""><br><br>
