@@ -15,7 +15,11 @@
     <hr>
 <!-- (condição) ?? == if...else -->
 <!-- echo (condição) ? true : false -->
-<form action="<?php echo isset($produto) ? "atualizar.php" : "inserir.php" ?>" method="post">
+    <form 
+        action="<?php echo isset($produto) ? "atualizar.php" : "inserir.php" ?>" 
+        method="post"
+        enctype="multipart/form-data"
+    >
         <label for="nome">Nome</label><br>
         <input type="text" id="nome" name="nome" value="<?php echo $produto["nome"] ?? ""; ?>"><br>
         <input type="hidden" id="id" name="id" value="<?php echo $produto["idproduto"] ?? ""; ?>"><br>
