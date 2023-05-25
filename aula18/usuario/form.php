@@ -1,16 +1,9 @@
 <?php
     require_once "consultar_por_id.php";
+    require_once "../template/cabecalho.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-</head>
-<body>
+<div class="container">
     <h1>Cadastro de usuários</h1>
     <hr>
 <!-- (condição) ?? == if...else -->
@@ -20,23 +13,22 @@
         method="post"
         enctype="multipart/form-data"
     >
-        <label for="nome">Nome</label><br>
-        <input type="text" id="nome" name="nome" value="<?php echo $usuario["nome"] ?? ""; ?>"><br>
-        <input type="hidden" id="id" name="id" value="<?php echo $usuario["idusuario"] ?? ""; ?>"><br>
+        <label for="nome" class="form-label">Nome</label><br>
+        <input type="text" id="nome" name="nome" class="form-control" value="<?php echo $usuario["nome"] ?? ""; ?>"><br>
+        <input type="hidden" class="form-control"  id="id" name="id" value="<?php echo $usuario["idusuario"] ?? ""; ?>"><br>
 
-       <label for="login">Login</label><br>
-       <input type="text" id="login" name="login" value="<?php echo $usuario['login'] ?? ""; ?>"><br>
+       <label for="login" class="form-label">Login</label><br>
+       <input type="text" class="form-control"  id="login" name="login" value="<?php echo $usuario['login'] ?? ""; ?>"><br>
        
-        <label for="senha">Senha</label><br>
-        <input type="password" id="senha" name="senha" value="<?php echo $usuario["senha"] ?? ""; ?>"><br>
+        <label for="senha" class="form-label">Senha</label><br>
+        <input type="password" class="form-control"  id="senha" name="senha" value="<?php echo $usuario["senha"] ?? ""; ?>"><br>
 
-        <label for="foto">Foto</label><br>
-        <input type="file" id="foto" name="foto" value=""><br><br>
+        <label for="foto" class="form-label">Foto</label><br>
+        <input type="file" class="form-control"  id="foto" name="foto" value=""><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit" class="btn btn-dark">Cadastrar</button>
     </form>
-</body>
-</html>
+</div>
 <?php
-
+    require_once "../template/rodape.php";
 ?>

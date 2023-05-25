@@ -21,5 +21,5 @@ if(isset($_GET['id'])){
     $comando->execute();
 }
 
-//abre o arquivo usuarios.php
-header("Location: usuarios.php");
+//abre o arquivo index.php
+header("Location: index.php");

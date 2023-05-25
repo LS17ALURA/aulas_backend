@@ -9,7 +9,7 @@ if (isset($_POST["nome"]) && isset($_POST["descricao"]) && isset($_POST["preco"]
     $nome=$_POST["nome"];
     $descricao=$_POST["descricao"];
     $preco=$_POST["preco"];
-    $foto="$nome_arquivo";
+    $foto=$nome_arquivo;
 }
 
 $sql = "INSERT INTO `produto`(`nome`, `descricao`, `preco`, `foto`) 
@@ -26,6 +26,6 @@ $comando->bind_param("ssds", $nome, $descricao, $preco, $foto);
 $comando->execute();
 
 // abre o arquivo form.php
-header("Location: produtos.php");
+header("Location: index.php");
 
 ?>
