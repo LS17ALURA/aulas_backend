@@ -28,4 +28,4 @@
 
     </form>
 </div>
-    <?php require_once "../template/rodape.php";  ?>
+    <?php require_once "template/rodape.php";  ?>

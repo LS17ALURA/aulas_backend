@@ -1,7 +1,7 @@
 
 <?php
 
-require_once "../conexao.php";
+require_once "conexao.php";
 
 if(isset($_POST["descricao"]) && isset($_POST["peso"]) 
            && isset($_POST["quantidade"]) && isset($_POST["valor"]))

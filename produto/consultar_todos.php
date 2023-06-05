@@ -1,6 +1,6 @@
 <?php
 
-require_once "../conexao.php";
+require_once "conexao.php";
 
 //String com o comando SQL para ser executado no DB
 $sql = "SELECT * FROM `produto` ";
