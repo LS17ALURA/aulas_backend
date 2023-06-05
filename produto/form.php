@@ -1,6 +1,6 @@
 
 <?php require_once "consultar_por_id.php" ?>
-<?php require_once "../template/cabecalho.php";  ?>
+<?php require_once "template/cabecalho.php";  ?>
 <div class="container">
     <h1>Cadastro de Produto</h1>
     <hr>
@@ -10,19 +10,18 @@
     method="post"
     enctype="multipart/form-data"
     >
-
-       <label for="nome" class="form-label">Nome</label><br>
-       <input type="text" name="nome" id="nome" value="<?php echo $produto['nome'] ?? ""; ?>"><br>
-       <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $produto['idproduto'] ?? ""; ?>"><br>
-
        <label for="descricao" class="form-label">Descrição</label><br>
        <textarea  name="descricao" class="form-control" id="descricao"><?php echo $produto['descricao'] ?? ""; ?></textarea><br>
+       <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $produto['codigo'] ?? ""; ?>"><br>
 
-       <label for="preco" class="form-label">Preço</label><br>
-       <input type="number" class="form-control" step="0.01" name="preco" id="preco" value="<?php echo $produto['preco'] ?? "0.00"; ?>"><br>
+       <label for="peso" class="form-label">Peso</label><br>
+       <input type="number" class="form-control" name="peso" id="peso" step="0.01" value="<?php echo $produto['peso'] ?? "0.00"; ?>"><br>
 
-       <label for="foto" class="form-label">Foto</label><br>
-       <input type="file" class="form-control" name="foto" id="foto"><br>
+       <label for="quantidade" class="form-label">Quantidade</label><br>
+       <input type="number" class="form-control" name="quantidade" id="quantidade" value="<?php echo $produto['quantidade'] ?? "0.00"; ?>"><br>
+
+       <label for="valor" class="form-label">Valor</label><br>
+       <input type="number" name="valor" id="valor" class="form-control" step="0.01" value="<?php echo $produto['valor'] ?? ""; ?>"><br>
 
        <br>
        <button type="submit" class="btn btn-dark">Cadastrar</button>

@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
     $id = $_GET['id'];
 
     //String com o comando SQL para ser executado no DB
-    $sql = "SELECT * FROM `produto` WHERE  `idproduto`= ? ; ";
+    $sql = "SELECT * FROM `produto` WHERE  `codigo`= ? ; ";
 
     //Prepara o SQL para ser executado no banco de dados
     $comando = $conexao->prepare($sql);

@@ -18,7 +18,7 @@ $foto = $nome_arquivo;
 //String com o comando SQL para ser executado no DB
 $sql = "UPDATE produto SET 
 `nome`= ?, `descricao`= ?, `preco`= ?, `foto`= ? 
-WHERE  `idproduto`= ? ";
+WHERE  `codigo`= ? ";
 
 //Prepara o SQL para ser executado no banco de dados
 $comando = $conexao->prepare($sql);

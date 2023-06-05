@@ -1,5 +1,5 @@
 <?php require_once "consultar_todos.php"; ?>
-<?php require_once "../template/cabecalho.php";  ?>
+<?php require_once "template/cabecalho.php";  ?>
 
   <div class="container">
         <h1>Produtos</h1>
@@ -31,16 +31,13 @@
 
         <?php foreach($produtos as $produto){ ?>
             <tr>
-                <th scope="row"><?php echo $produto['nome']; ?></th>
-                <td><?php echo $produto['preco']; ?></td>
+                <th scope="row"><?php echo $produto['descricao']; ?></th>
+                <td><?php echo $produto['peso']; ?></td>
+                <td></td><?php echo $produto['quantidade']; ?></td>
+                <td><?php echo $produto['valor']; ?></td>
                 <td>
-                  <img 
-                      src="../uploads/<?php echo $produto['foto']; ?>" 
-                      height="30px" alt="">
-              </td>
-                <td>
-                  <a href="excluir.php?id=<?php echo $produto['idproduto']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
-                  <a href="form.php?id=<?php echo $produto['idproduto']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
+                  <a href="excluir.php?id=<?php echo $produto['codigo']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
+                  <a href="form.php?id=<?php echo $produto['codigo']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
                 </td>
             </tr>
         <?php } ?>
